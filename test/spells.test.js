@@ -19,5 +19,9 @@ describe('Spell', () => {
     test('Spell.find is a function', () => {
     expect(typeof spells.find).toBe('function')
     })
+    test('Spells find function returns json', async () => {
+      const data = await spells.find()
+      expect(typeof data).toBe('object')
+    })
   })
 })
